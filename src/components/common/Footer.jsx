@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assects/Logo.jpg"
 import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter, AiOutlineLinkedin } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 
 import { footerLinks } from '../../data/footer_link';
@@ -22,10 +23,10 @@ const Footer = ({ className }) => {
 
             <section className='text-richblack-50 flex justify-start items-center text-4xl gap-4 mt-9 transition-all duration-200'>
               <AiOutlineFacebook className='hover:text-blue-400  transition-all duration-200'></AiOutlineFacebook>
-              <AiOutlineInstagram className=' instagram transition-all duration-200'></AiOutlineInstagram>
-              <AiOutlineTwitter className='transition-all duration-200'></AiOutlineTwitter>
-              <AiOutlineLinkedin className='transition-all duration-200'></AiOutlineLinkedin>
-              <FaDiscord className='transition-all duration-200'></FaDiscord>
+              <AiOutlineInstagram className='instagram transition-all duration-200'></AiOutlineInstagram>
+              <FaXTwitter className='transition-all duration-200'></FaXTwitter>
+              <AiOutlineLinkedin className='hover:text-blue-500 transition-all duration-200'></AiOutlineLinkedin>
+              <FaDiscord className=' hover:text-blue-100 transition-all duration-200'></FaDiscord>
               <></>
 
 

@@ -12,3 +12,17 @@
   background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
     }
+
+
+input,textarea:focus{
+  outline: none;
+
+  
+
+}
+input,textarea{
+  background: #e1e1e2;
+  color: #000814;
+  border-radius:0.375rem ;
+
+}

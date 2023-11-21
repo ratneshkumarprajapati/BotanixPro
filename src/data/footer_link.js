@@ -10,7 +10,7 @@ export const footerLinks=[
     },
     {
         title:"Classification",
-        link:"/classification"
+        // link:"/classification"
     },
     {
         title:"ContactUs",

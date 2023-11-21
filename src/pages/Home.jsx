@@ -14,6 +14,7 @@ import seedlink from "../assects/img4.png"
 import Footer from '../components/common/Footer';
 import Subscriber from '../components/common/Subscriber';
 
+
 const Home = () => {
 
     useEffect(()=>{
@@ -33,7 +34,7 @@ const Home = () => {
                        
                         <Typewriter
                             options={{
-                                strings: ['Botanix Pro', 'Plant classification',"Leaf Disease Detection","SeedLink classification"],
+                                strings: ['Botanix Pro', 'Medicinal Plant classification',"Leaf Disease Detection","SeedLing classification"],
                                 autoStart: true,
                                 loop: true,
                             }}
