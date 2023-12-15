@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css"
 
+
 import Typewriter from 'typewriter-effect';
 import IconBtn from '../components/common/IconBtn';
 // import plantC from "../assects/plant_classification.jpg";
@@ -23,9 +24,10 @@ const Home = () => {
     },[])
 
     return (
-        <div className='w-[100%] h-[100vh] relative'>
-            <section className='w-[100%] relative  h-[100vh] font-bold text-richblack-50 bg-richblack-800 '>
-                <div  className='w-[55%] h-[100%] absolute rounded-3xl top-5 right-0 '>
+        <div className='w-[100%]  lg:w-full  md:w-full  h-[100vh] relative'>
+            <section className='w-[100%]    relative  h-[100vh] font-bold text-richblack-50 bg-richblack-800 '>
+                <div  className='w-[55%] hidden md:flex
+                   h-[100%] absolute rounded-3xl top-5 right-0    '>
                     <img src={hero1} alt="" className='w-[100%] h-[100%] object-cover ' />
                 </div>
                 <h2 className='absolute top-[25%] left-[3%] w-[90%]  text-[430%] text-richblack-25 '>Explore More with <br />
@@ -45,8 +47,8 @@ const Home = () => {
 
                 <IconBtn
                     text="Explore More"
-                    path="/signup"
-                    className={"px-7 py-5 absolute top-[60%] left-[3%]  text-richblack-900 font-inter text-lg "}
+                    path="/about"
+                    className={" px-7 py-5   absolute top-[70%] md:top[60%] left-[3%]  text-richblack-900 font-inter text-lg  "}
 
 
                 >   </IconBtn>
@@ -57,20 +59,20 @@ const Home = () => {
             <section className='w-[100%] pt-[10rem] bg-richblack-800 flex flex-col justify-center items-center pb-[10rem]'>
                 <h2 className='text-richblack-50 mx-auto text-[4.5rem] font-bold mb-10 ' data-aos="fade-down">Our Features</h2>
 
-                <div className=' w-11/12 flex justify-evenly items-start mt-24 '>
+                <div className=' w-11/12 flex flex-col sm:flex-row justify-evenly items-start mt-24 '>
 
 
-                    <div className=' w-[50%]  flex justify-evenly items-center' data-aos="fade-right">
+                    <div className=' sm:w-[50%] w-full   flex justify-evenly  items-center' data-aos="fade-right">
                         <div className='relative w-[70%] h-[30rem] '>
                             <img src={img1} alt="" className='w-[100%] h-[100%] object-cover absolute top-0 left-0 rounded-md' />
 
 
                         </div>
                     </div>
-                    <div className='w-[50%] '>
-                        <div className='w-[85%] text-xl font-inter text-richblack-50 flex flex-col justify-start' data-aos="fade-left">
+                    <div className='sm:w-[50%] w-full flex justify-center mt-10 sm:mt-0 sm:block  '>
+                        <div className='w-[85%] pl-5 sm:pl-0 text-xl font-inter text-richblack-50 flex flex-col justify-start' data-aos="fade-left">
 
-                            <h2 className='text-[2rem] font-semibold mb-10'> Plant Classification</h2>
+                            <h2 className='text-[2rem] font-semibold mb-10'>Medicinal Plant Classification</h2>
                             <p className='w-[100%]'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus delectus iste eum, natus veritatis dolore aspernatur, quos quia possimus quo laborum enim consequatur reprehenderit. Amet qui nulla aspernatur ad. <br />
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus delectus iste eum, natus veritatis dolore aspernatur, quos quia possimus quo laborum enim consequatur reprehenderit. Amet qui nulla aspernatur ad.
@@ -79,11 +81,11 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className=' w-11/12 flex justify-evenly items-start mt-24 '>
+                <div className=' w-11/12 flex  flex-col-reverse sm:flex-row justify-evenly items-start mt-24 '>
 
 
-                    <div className='w-[50%] '>
-                        <div className='w-[85%] text-xl font-inter text-richblack-50 flex flex-col justify-center' data-aos="fade-right">
+                    <div className='sm:w-[50%] w-full mt-10 sm:mt-0 '>
+                        <div className='w-[85%] pl-14 text-xl font-inter text-richblack-50 flex flex-col justify-center' data-aos="fade-right">
 
                             <h2 className='text-[2rem] font-semibold mb-10'> Leaf Disease Detection</h2>
                             <p className='w-[100%]'>
@@ -93,7 +95,7 @@ const Home = () => {
                         </div>
 
                     </div>
-                    <div className=' w-[50%]  flex justify-evenly items-center' data-aos="fade-left">
+                    <div className=' sm:w-[50%] w-full  flex justify-evenly items-center' data-aos="fade-left">
                         <div className='relative w-[70%] h-[30rem] '>
                             <img src={leafD} alt="" className='w-[100%] h-[100%] object-cover absolute top-0 left-0 rounded-md' />
 
@@ -101,18 +103,18 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' w-11/12 flex justify-evenly items-start mt-24 '>
+                <div className=' w-11/12 flex flex-col sm:flex-row justify-evenly items-start mt-24 '>
 
 
-                    <div className=' w-[50%]  flex justify-evenly items-center' data-aos="fade-right">
+                    <div className='sm:w-[50%] w-full flex justify-evenly items-center' data-aos="fade-right">
                         <div className='relative w-[70%] h-[30rem] '>
                             <img src={seedlink} alt="" className='w-[100%] h-[100%] object-cover absolute top-0 left-0 rounded-md' />
 
 
                         </div>
                     </div>
-                    <div className='w-[50%]  ' data-aos="fade-left">
-                        <div className='w-[85%] text-xl font-inter text-richblack-50 flex flex-col justify-start'>
+                    <div className='sm:w-[50%] w-full mt-10 sm:mt-0  ' data-aos="fade-left">
+                        <div className='w-[85%] text-xl pl-16 sm:pl-0 font-inter text-richblack-50 flex flex-col justify-start'>
 
                             <h2 className='text-[2rem] font-semibold mb-10'> Seedlink Classification</h2>
                             <p className='w-[100%]'>

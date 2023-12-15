@@ -10,21 +10,22 @@ const Navbar = () => {
     const { token } = useSelector((state) => state.auth)
     console.log(token)
     return (
-        <div className='w-100% h-[5rem] bg-richblack-900'>
+        <div className='w-[100%] px-5  h-[5rem] grid place-items-center bg-richblack-900'>
 
-            <div className='w-11/12 flex justify-evenly items-center'>
+            <div className='w-11/12 sm:w-full flex justify-between items-center'>
                 <div className=' h-[50%]   w-[150px] overflow-hidden rounded-sm'>
                     <Link to="/">
                         <img src={logo} alt="" className='scale-150 -translate-y-2' width={100} height={50} />
                     </Link>
                 </div>
 
-                <div className='text-richblack-25 flex justify-between items-center '>
+                <div className='text-richblack-25  justify-between items-center hidden sm:flex '>
                     {
                         NavbarLinks.map((data, i) => {
 
                             return (
                                 <div key={i} className='flex '>
+                                  
 
                                     {
                                         data?.title === "Classification" ? (
@@ -107,44 +108,7 @@ const Navbar = () => {
                 </div>
 
 
-                <div className='flex justify-between w-[10%] items-center'>
-
-                    {/* login handle */}
-                    <div className='border-2 px-2 py-1 border-richblack-500 rounded-md text-lg hover:bg-yellow-100 transition-all duration-200 text-richblack-50 hover:border-yellow-500 hover:text-richblack-900'>
-                        {token === null && (
-                            <Link to="/login">
-                                <button className=''>
-                                    Log in
-                                </button>
-
-                            </Link>
-                        )
-
-
-
-
-
-
-
-                        }
-                    </div>
-
-                    {/* sign up */}
-                    <div className='border-2 px-2 py-1 border-richblack-500 rounded-md text-lg
-                    hover:bg-yellow-100 hover:text-richblack-900  text-richblack-50 transition-all duration-300 hover:border-yellow-500'>
-                        {
-                            token === null && (
-                                <Link to="/signup">
-                                    <button >
-                                        Sign Up
-                                    </button>
-
-                                </Link>
-                            )
-                        }
-                    </div>
-
-                </div>
+                
 
             </div>
 

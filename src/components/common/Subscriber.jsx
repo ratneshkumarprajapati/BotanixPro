@@ -2,7 +2,7 @@ import React from 'react'
 
 const Subscriber = () => {
     return (
-        <div className='w-[100%] h-[10rem] bg-caribbeangreen-1000 relative flex justify-center items-center '>
+        <div className='w-[100%] hidden lg:flex h-[10rem] bg-caribbeangreen-1000 relative  justify-center items-center '>
             <div className='border-r-2 flex flex-col justify-center items-center px-16 '>
                 <h2 className='text-[2rem] font-bold font-inter'>100K+</h2>
 
