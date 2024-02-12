@@ -11,7 +11,7 @@ const ContactUsForm = () => {
 
         <form action=" " className='w-[100%]' onSubmit={handleSubmit((data)=>console.log(data))}>
 
-            <div className='w-[80%] flex flex-col justify-center  mt-5'>
+            <div className='sm:w-[80%] w-full flex flex-col justify-center  mt-5'>
                 <section className='text-xl text-richblack-25 flex flex-col justify-center '>
                     <label htmlFor="">Name</label>
                     <input type="text"

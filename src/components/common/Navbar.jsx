@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavbarLinks } from '../../data/nav_links';
 import logo from "../../assects/Logo.jpg";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { RxHamburgerMenu,RxCross1 } from "react-icons/rx";
 import { classificationList } from '../../data/classification_data';
+import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
+    const [openMenu,setOpenMenu]=useState(false);
+    console.log("value",openMenu);
+     const handleClick=()=>{
+        console.log("object");
+        
+        setOpenMenu(!openMenu);
+
+
+    }
 
     const { token } = useSelector((state) => state.auth)
     console.log(token)
@@ -18,6 +29,18 @@ const Navbar = () => {
                         <img src={logo} alt="" className='scale-150 -translate-y-2' width={100} height={50} />
                     </Link>
                 </div>
+                <div className='flex sm:hidden text-2xl text-richblack-5'>
+                  {
+                    openMenu ? "" :<RxHamburgerMenu onClick={handleClick}  />
+
+                }
+                {
+                openMenu && <MobileMenu handleClick={handleClick}></MobileMenu>
+                }  
+                </div>
+                
+
+                
 
                 <div className='text-richblack-25  justify-between items-center hidden sm:flex '>
                     {
@@ -25,7 +48,7 @@ const Navbar = () => {
 
                             return (
                                 <div key={i} className='flex '>
-                                  
+
 
                                     {
                                         data?.title === "Classification" ? (
@@ -39,16 +62,16 @@ const Navbar = () => {
 
                                                     </div>
                                                     {
-                                                        classificationList.map((data,index)=>(
+                                                        classificationList.map((data, index) => (
                                                             <p className='text-richblack-900 border-b-2 hover:bg-yellow-100 p-4 font-semibold'>
-                                                              <Link to={data?.cPath} key={index} >
-                                                                {data?.cName}
+                                                                <Link to={data?.cPath} key={index} >
+                                                                    {data?.cName}
 
 
-                                                            </Link>
-  
+                                                                </Link>
+
                                                             </p>
-                                                            
+
                                                         ))
                                                     }
 
@@ -108,7 +131,12 @@ const Navbar = () => {
                 </div>
 
 
+                {/* login sign up  */}
+
                 
+
+
+
 
             </div>
 
@@ -118,3 +146,50 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
+
+
+
+
+
+
+// //  <div className='flex justify-between w-[10%] items-center'>
+
+//                     {/* login handle */}
+//                     {/* <div className='border-2 px-2 py-1 border-richblack-500 rounded-md text-lg hover:bg-yellow-100 transition-all duration-200 text-richblack-50 hover:border-yellow-500 hover:text-richblack-900'>
+//                         {token === null && (
+//                             <Link to="/login">
+//                                 <button className=''>
+//                                     Log in
+//                                 </button>
+
+//                             </Link>
+//                         )
+
+
+
+
+
+
+
+//                         }
+//                     </div> */}
+
+//                     {/* sign up */}
+//                     {/* <div className='border-2 px-2 py-1 border-richblack-500 rounded-md text-lg
+//                     hover:bg-yellow-100 hover:text-richblack-900  text-richblack-50 transition-all duration-300 hover:border-yellow-500'>
+//                         {
+//                             token === null && (
+//                                 <Link to="/signup">
+//                                     <button >
+//                                         Sign Up
+//                                     </button>
+
+//                                 </Link>
+//                             )
+//                         }
+//                     </div> */}
+
+//                     </div> 

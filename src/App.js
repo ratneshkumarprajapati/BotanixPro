@@ -13,7 +13,7 @@ import SeedLingsClassification from './pages/SeedLingsClassification';
 
 function App() {
   return (
-    <div className=" w-[100%] lg:w-full md:w-full   ">
+    <div className=" w-[100%] lg:w-full md:w-full  ">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

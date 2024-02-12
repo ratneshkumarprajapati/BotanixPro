@@ -7,11 +7,11 @@ const IconBtn = ({text,className,path}) => {
    
     <>
     <Link to={`${path}`}>
-     <button className={`bg-yellow-25 relative hover:scale-95 transition-all duration-200 ${className}`}>
+     <button className={`bg-yellow-25 flex justify-center items-center relative  hover:scale-95 transition-all duration-200 ${className}`}>
         {
             text
         }
-        <AiOutlineArrowRight className='absolute top-6 right-1'></AiOutlineArrowRight>
+        <AiOutlineArrowRight className='ml-2 '></AiOutlineArrowRight>
 
     </button>
     
